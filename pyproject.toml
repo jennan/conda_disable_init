@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conda-disable-init"
+version = "1.0.0"
+description = "Disable conda init command"
+requires-python = ">=3.8"
+dependencies = ["conda"]
+
+[project.entry-points.conda]
+conda-disable-init = "conda_disable_init"
+
+[tool.setuptools]
+py-modules = ["conda_disable_init"]
